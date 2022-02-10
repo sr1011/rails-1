@@ -1,0 +1,2 @@
+module GataPagesHelper
+end

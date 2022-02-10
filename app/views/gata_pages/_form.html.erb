@@ -1,0 +1,22 @@
+<%= form_with(model: gata_page, local: true) do |form| %>
+  <% if gata_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gata_page.errors.count, "error") %> prohibited this gata_page from being saved:</h2>
+
+      <ul>
+      <% gata_page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.text_area :data %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

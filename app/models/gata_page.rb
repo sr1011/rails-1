@@ -1,0 +1,2 @@
+class GataPage < ApplicationRecord
+end
