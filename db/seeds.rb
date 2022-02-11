@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+data = ['one' ,'two' ,'three' ,'four' ,'five' ,'six' ,'seven' ,'eigth' ,'nine' ,'ten' ,'zero' ,
+        'white' ,'black' ,'gray' ,'red' ,'blue' ,'green' ,'yellow' ,'cyan' ,'magenta']
+
+for i in 1..100 do
+  GataPage.create data:data.sample
+end
