@@ -1,11 +1,17 @@
 <p id="notice"><%= notice %></p>
+<h1 class="display-4 text-primary">
+  Data Pages</h1>
+  
+<div class='mt-4 mb-4'>
+  <%= page_entries_info @gata_pages %>
+</div>
 
-<h1>Gata Pages</h1>
-
-<table>
+<table class="table">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Data</th>
+      <th>Created at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,7 +19,9 @@
   <tbody>
     <% @gata_pages.each do |gata_page| %>
       <tr>
+        <td><%= gata_page.id %></td>
         <td><%= gata_page.data %></td>
+        <td><%= gata_page.created_at %></td>
         <td><%= link_to 'Show', gata_page %></td>
         <td><%= link_to 'Edit', edit_gata_page_path(gata_page) %></td>
         <td><%= link_to 'Destroy', gata_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -21,7 +29,8 @@
     <% end %>
   </tbody>
 </table>
-
+<br>
+<div><%= paginate @gata_pages %></div>
 <br>
 
 <%= link_to 'New Gata Page', new_gata_page_path %>
