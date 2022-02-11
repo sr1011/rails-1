@@ -3,7 +3,7 @@ class GataPagesController < ApplicationController
 
   # GET /gata_pages or /gata_pages.json
   def index
-    @gata_pages = GataPage.all
+    @gata_pages = GataPage.page params[:page]
   end
 
   # GET /gata_pages/1 or /gata_pages/1.json
